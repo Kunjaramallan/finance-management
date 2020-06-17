@@ -17,4 +17,8 @@ export class FinanceListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // customersList() {
+  //   this.financeService.getCustomers().subscribe(data => console.log(data));
+  // }
+  
 }

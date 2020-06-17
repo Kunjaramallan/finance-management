@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -64,6 +65,14 @@ export class FinanceService {
     }
   ];
 
-  constructor() { }
+  constructor(public httpClient: HttpClient) { }
+
+  // getCustomers(){
+  //   this.httpClient.get('https://json.com/customers');
+  // }
+
+  // updateAccountNumber(data){
+  //   this.httpClient.post('https://json.com/customers', data);
+  // }
 
 }

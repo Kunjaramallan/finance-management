@@ -1,0 +1,17 @@
+.modal-body {
+    min-height: 100px;
+}
+
+.button-collection {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+select {
+    outline: 0;
+    border-radius: 0;
+    border: 1px solid #d6d6d6;
+    padding: 2px;
+    margin: 5px;
+}

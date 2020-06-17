@@ -7,21 +7,29 @@
     <hr>
     <table>
         <tr>
-            <td>
-                <ul>
-                    <li>Creation date</li>
-                    <li>Change account number</li>
-                    <li>Charge date</li>
-                    <li>Status</li>
-                </ul>
-            </td>
-            <td>
-                <ul>
-                    <li>Invested Amount</li>
-                    <li>Accumulated Invested Amount</li>
-                    <li>Current Market Value</li>
-                </ul>
-            </td>
+            <td>Creation date: <label>12/12/2019</label></td>
+            <td></td>
+            <td>Investment Amount: <span>TWD </span> <label>{{ customerDetail.invest_amount }}</label></td>
+            <td><button class="button-default">Adjust Amount</button></td>
+        </tr>
+        <tr>
+            <td>Change account number: <label>{{ customerDetail.ac_no }}</label></td>
+            <td><i (click)="openModal()" class="las la-pencil-alt"></i></td>
+            <td>Accumulated Investment Amount: <span>TWD </span><label>5,000</label></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Charge date: <label>1 of the month</label><span> (Next payment date)</span></td>
+            <td><i class="las la-pencil-alt"></i></td>
+            <td>Accumulated Investment Amount: <span>TWD </span><label>5,000</label></td>
+            <td><button class="button-default">Redemption</button></td>
+        </tr>
+        <tr>
+            <td>Status: <label>{{ customerDetail.status }}</label></td>
+            <td><button class="button-default">Suspension of investment</button></td>
         </tr>
     </table>
+</div>
+<div class="return-button">
+    <button class="button-secondary">Return</button>
 </div>
