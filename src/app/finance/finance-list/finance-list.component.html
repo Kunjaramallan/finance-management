@@ -1,11 +1,10 @@
 <h3>Customers List</h3>
 <div class="customer-container">
-    <div class="customer"></div>
-    <div class="customer"></div>
-    <div class="customer"></div>
-    <div class="customer"></div>
-    <div class="customer"></div>
-    <div class="customer"></div>
-    <div class="customer"></div>
-    <div class="customer"></div>
+    <a class="customer" [routerLink]="['/customer/detail', item.id]" *ngFor="let item of customers">
+        <h5>{{ item.username }}</h5>
+        <ul class="customer-status">
+            <li><label><strong>Status -</strong> {{ item.status }}</label></li>
+            <li><label><strong>Investment -</strong> {{ item.invest_amount }}</label></li>
+        </ul>
+    </a>
 </div>

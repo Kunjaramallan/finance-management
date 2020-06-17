@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/finance', pathMatch: 'full' },
-  { path: 'finance', loadChildren: () => import(`./finance/finance.module`).then(m => m.FinanceModule) },
+  { path: '', redirectTo: 'customer', pathMatch: 'full' },
+  { path: 'customer', loadChildren: () => import(`./finance/finance.module`).then(m => m.FinanceModule) },
+  { path: '**', component: PagenotfoundComponent}
 ];
 
 

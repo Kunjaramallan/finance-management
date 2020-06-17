@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FinanceService } from '../finance.service';
 
 @Component({
   selector: 'app-finance-list',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FinanceListComponent implements OnInit {
 
-  constructor() { }
+  customers: any = [];
+
+  constructor(private financeService: FinanceService) {
+     this.customers = [...this.financeService.customersList];
+  }
 
   ngOnInit(): void {
   }
